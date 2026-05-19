@@ -1,0 +1,41 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String    @id @default(uuid())
+  name      String
+  email     String    @unique
+  password  String
+  role      String    @default("USER")
+  createdAt DateTime  @default(now())
+  stations  Station[]
+}
+
+model Station {
+  id        String    @id @default(uuid())
+  name      String
+  location  String
+  isActive  Boolean   @default(true)
+  userId    String
+  user      User      @relation(fields: [userId], references: [id])
+  readings  Reading[]
+}
+
+model Reading {
+  id          String    @id @default(uuid())
+  temperature Float
+  humidity    Float
+  airQuality  Float?
+  timestamp   DateTime  @default(now())
+  stationId   String
+  station     Station   @relation(fields: [stationId], references: [id])
+}
