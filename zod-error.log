@@ -1,8 +1,0 @@
-{
-  "name": "ZodError",
-  "isZod": true,
-  "keys": [
-    "name",
-    "message"
-  ]
-}
