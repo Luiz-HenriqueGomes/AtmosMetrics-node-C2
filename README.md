@@ -20,7 +20,7 @@ User (1) ──── (N) Station (1) ──── (N) Reading
 
 ## Stack Tecnológica
 
-- **Runtime:** Node.js + TypeScript
+- **Runtime:** Node.js 20+ + TypeScript (ES Modules)
 - **Framework:** Express.js
 - **ORM:** Prisma
 - **Banco de dados:** SQLite
@@ -54,7 +54,7 @@ O servidor estará disponível em `http://localhost:3000`.
 
 ## Documentação da API (Swagger)
 
-Acesse `http://localhost:3000/api-docs` para visualizar a documentação interativa da API.
+Acesse `http://localhost:3000/docs` para visualizar a documentação interativa da API.
 
 ## Endpoints
 
@@ -150,6 +150,31 @@ npm run coverage
 
 | Variável | Descrição | Exemplo |
 |----------|-----------|---------|
-| `DATABASE_URL` | URL de conexão com o SQLite | `file:./dev.db` |
+| `DATABASE_URL` | URL de conexão com o SQLite | `file:./prisma/dev.db` |
 | `JWT_SECRET` | Chave secreta para assinar tokens JWT | `minha-chave-secreta` |
 | `PORT` | Porta do servidor | `3000` |
+
+## Relatório de Cobertura de Testes
+
+```text
+ % Coverage report from v8
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |   84.37 |    76.36 |      92 |   84.37 |                   
+ src               |   81.25 |      100 |   33.33 |   81.25 |                   
+  app.ts           |      75 |      100 |       0 |      75 | 18,28-29          
+  swagger.ts       |     100 |      100 |     100 |     100 |                   
+ src/controllers   |   80.57 |    80.55 |     100 |   80.57 |                   
+  ...controller.ts |   78.94 |     87.5 |     100 |   78.94 | ...64,84-85,90-91 
+  ...controller.ts |   82.92 |    83.33 |     100 |   82.92 | ...46,50-51,61,87 
+  ...controller.ts |      80 |       75 |     100 |      80 | ...05,117-118,130 
+ src/middlewares   |   85.71 |     64.7 |     100 |   85.71 |                   
+  ...middleware.ts |    87.5 |    83.33 |     100 |    87.5 | 29-30             
+  ...middleware.ts |   77.77 |       75 |     100 |   77.77 | 7-8               
+  ...middleware.ts |      90 |    42.85 |     100 |      90 | 24                
+ src/routes        |     100 |      100 |     100 |     100 |                   
+ src/schemas       |     100 |      100 |     100 |     100 |                   
+ src/utils         |     100 |      100 |     100 |     100 |                   
+-------------------|---------|----------|---------|---------|-------------------
+```
