@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
-import { prisma } from '../utils/prisma';
-import { hashPassword, comparePassword, generateToken } from '../utils/auth';
-import { AuthenticatedRequest } from '../middlewares/auth.middleware';
+import { prisma } from '../utils/prisma.js';
+import { hashPassword, comparePassword, generateToken } from '../utils/auth.js';
+import { AuthenticatedRequest } from '../middlewares/auth.middleware.js';
 
 export const register = async (req: Request, res: Response): Promise<void> => {
   try {

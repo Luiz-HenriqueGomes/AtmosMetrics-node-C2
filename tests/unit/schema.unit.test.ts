@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
-import { registerSchema, loginSchema } from '../../src/schemas/auth.schema';
-import { createStationSchema } from '../../src/schemas/station.schema';
-import { createReadingSchema } from '../../src/schemas/reading.schema';
+import { registerSchema, loginSchema } from '../../src/schemas/auth.schema.js';
+import { createStationSchema } from '../../src/schemas/station.schema.js';
+import { createReadingSchema } from '../../src/schemas/reading.schema.js';
 
 describe('Zod Schema Validations — Unit Tests', () => {
   // Test 1: Register schema accepts valid input

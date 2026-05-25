@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import { createReading, getReadingsByStation, getReadingById } from '../controllers/reading.controller';
-import { authMiddleware } from '../middlewares/auth.middleware';
-import { validate } from '../middlewares/validate.middleware';
-import { createReadingSchema } from '../schemas/reading.schema';
+import { createReading, getReadingsByStation, getReadingById } from '../controllers/reading.controller.js';
+import { authMiddleware } from '../middlewares/auth.middleware.js';
+import { validate } from '../middlewares/validate.middleware.js';
+import { createReadingSchema } from '../schemas/reading.schema.js';
 
 const router = Router();
 

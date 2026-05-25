@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
-import { verifyToken } from '../utils/auth';
-import { prisma } from '../utils/prisma';
+import { verifyToken } from '../utils/auth.js';
+import { prisma } from '../utils/prisma.js';
 
 export interface AuthenticatedRequest extends Request {
   userId?: string;

@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import request from 'supertest';
-import app from '../src/app';
-import { prisma } from '../src/utils/prisma';
+import app from '../src/app.js';
+import { prisma } from '../src/utils/prisma.js';
 
 describe('Auth Endpoints — Integration', () => {
   let token: string;

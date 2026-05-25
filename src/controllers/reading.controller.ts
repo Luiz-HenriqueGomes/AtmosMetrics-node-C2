@@ -1,6 +1,6 @@
 import { Response } from 'express';
-import { prisma } from '../utils/prisma';
-import { AuthenticatedRequest } from '../middlewares/auth.middleware';
+import { prisma } from '../utils/prisma.js';
+import { AuthenticatedRequest } from '../middlewares/auth.middleware.js';
 
 export const createReading = async (req: AuthenticatedRequest, res: Response): Promise<void> => {
   try {

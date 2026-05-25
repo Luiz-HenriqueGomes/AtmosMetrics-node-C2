@@ -1,9 +1,9 @@
 import express, { Application, Request, Response, NextFunction } from 'express';
 import cors from 'cors';
-import authRoutes from './routes/auth.routes';
-import stationRoutes from './routes/station.routes';
-import readingRoutes from './routes/reading.routes';
-import { setupSwagger } from './swagger';
+import authRoutes from './routes/auth.routes.js';
+import stationRoutes from './routes/station.routes.js';
+import readingRoutes from './routes/reading.routes.js';
+import { setupSwagger } from './swagger.js';
 
 const app: Application = express();
 

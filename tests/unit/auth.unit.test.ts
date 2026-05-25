@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { hashPassword, comparePassword, generateToken, verifyToken } from '../../src/utils/auth';
+import { hashPassword, comparePassword, generateToken, verifyToken } from '../../src/utils/auth.js';
 
 describe('Auth Helpers — Unit Tests', () => {
   // Test 1: Hash is different from plain text

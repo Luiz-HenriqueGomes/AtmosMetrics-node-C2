@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import { createStation, getStations, getStationById, getAllStations, updateStation, deleteStation } from '../controllers/station.controller';
-import { authMiddleware } from '../middlewares/auth.middleware';
-import { authorize } from '../middlewares/authorize.middleware';
-import { validate } from '../middlewares/validate.middleware';
-import { createStationSchema, updateStationSchema } from '../schemas/station.schema';
+import { createStation, getStations, getStationById, getAllStations, updateStation, deleteStation } from '../controllers/station.controller.js';
+import { authMiddleware } from '../middlewares/auth.middleware.js';
+import { authorize } from '../middlewares/authorize.middleware.js';
+import { validate } from '../middlewares/validate.middleware.js';
+import { createStationSchema, updateStationSchema } from '../schemas/station.schema.js';
 
 const router = Router();
 
